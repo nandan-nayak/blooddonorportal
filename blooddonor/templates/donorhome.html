@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'fonticon.css' %}">
+<link rel="stylesheet" href="{% static 'newstyle.css' %}">
+
+
+</head>
+<body style="background-color:#094FB4;height:100%;">
+ 
+
+<section style="float:left;width:50%;height:100%;">
+
+            <div class="profile-card py-3 card shadow text-center " style="width:70%;height:90%;margin-left:10%;margin-top:5%;">
+                <div class="card-body py-4" style="height:100%;">
+
+                    <img class="profile-picture rounded-circle" src="../media/{{user.user2.blooddonor.profile_picture}}" />
+                   <div style="margin-top:10%;"> <span class="fas fa-user" style="float:left;font-size:40px;color:red"></span><h2 class="text-warning h4 font-weight-bold mt-3 mb-1">
+                      {{user.user2.blooddonor.donor_name}}
+                    </h2>
+			</div>
+                  <div style="margin-top:10%;"> <span class="material-icons" style="float:left;font-size:40px;color:red">brightness_1</span> <p class="text-danger text-uppercase font-weight-bold mt-3 mb-1">
+               <p>    
+{% if user.user2.blooddonor.blood_group %}
+     {{user.user2.blooddonor.blood_group}}
+{% else %}
+Blood group not set
+
+{% endif %}
+                    </p>
+		</div>
+                <div style="margin-top:10%;"> <span class="fas fa-address-book" style="float:left;font-size:40px;color:red"></span>   <p class="px-3 mt-4">
+{{user.user2.blooddonor.donor_address}}                      
+
+   </p>
+                 </div>  
+
+<div style="margin-top:10%;"> <span class="fas fa-phone" style="float:left;font-size:40px;color:red"></span> 
+  
+
+<p class="px-3 mt-4">{{user.user2.blooddonor.contact}}
+                          </p>
+                 </div>  
+
+                </div>
+            </div>
+
+</section>
+
+<section style="float:right;width:50%;height:100%;">
+<div class="card  text-white bg-dark mb-3" style="width:70%;height:90%;margin-left:10%;margin-top:5%;">
+  <img class="card-img-top" style="height:80%;" src="../media/{{user.user2.blooddonor.qrcode}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">QR CODE</h5>
+    
+   
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

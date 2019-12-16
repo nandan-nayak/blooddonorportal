@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" integrity="" crossorigin="anonymous">
+</head>
+
+<body >
+
+
+
+ 
+<div style="height:100%;position:center; background-size: cover;">
+<section style="width:50%;height:100%; float : left;background-image:url({% static 'blurbackground3.jpg' %});background-repeat: no-repeat;background-size: cover;">
+<div class="card text-white  mb-3" style="background:grey;opacity:0.8;max-width: 18rem;margin-top:10%;margin-left:20%">
+<div class="card-header">
+<div class="container">
+<h1>LOG IN</h1>
+<form class="site-form"  action="{% url 'donorlogin' %}" method="POST">
+{%  csrf_token %}
+    {{ form }}
+<br>
+<input type="submit" class="btn btn-primary" style="margin-top:5%" value="login"/>
+</form>
+</div>
+</div>
+</section>
+<section style="width:50%;height:100%; float:right;background-image:url({% static 'blurbackground2.jpg' %});background-repeat: no-repeat;background-size: cover; ">
+
+<div class="card text-white  mb-3" style="width:80%;background:grey;opacity:0.8;margin-top:0%;margin-left:5%">
+<div class="card-header">
+<div class="container" >
+    <h1>Sign Up</h1>
+<form   method="POST" enctype="multipart/form-data">
+{%  csrf_token %}
+    {{ form1.as_p }}
+<button class="btn btn-primary" type="submit">Sign up</button>
+</form>
+ 
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+</section>
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+</html>

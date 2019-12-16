@@ -1,0 +1,21 @@
+next = request.GET.get('next')
+    form = UserLoginForm(request.POST or None)
+    context=dict()
+    if form.is_valid() :
+        
+        print("entered into login")
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        if next:
+            return redirect(next)
+        return redirect('authorityhome')
+    context['form']= form
+
+
+
+hospital_name=forms.CharField(max_length=30)
+    hospital_address=forms.CharField(max_length=30)
+    license=forms.FileField(widget=forms.FileInput(attrs={'id':'licenseinput'}))
+    

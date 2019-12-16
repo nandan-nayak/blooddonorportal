@@ -1,0 +1,33 @@
+<div style="margin-top:5%;margin-left:5%;width:50%" >
+<input type="text" name="donorname" placeholder="donor name will appear here" style="width:100%;height:50px" value="" readonly></input>
+</div>
+
+<div style="margin-top:5%;margin-left:5%;width:50%;" >
+<input type="text" name="address" placeholder="donor address will appear here" style="width:100%;height:50px;" readonly></input>
+</div>
+
+
+<div style="margin-top:5%;margin-left:5%;width:50%" >
+<input type="text" name="contact" placeholder="donor contact will appear here" style="width:100%;height:50px" readonly></input>
+</div>
+
+<div style="margin-top:5%;margin-left:5%;width:50%">
+<select name="bloodgroup" required style="width:50%;height:50px;">
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB+">AB-</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+</select>
+
+
+</div>
+
+
+
+<div style="margin-top:5%;margin-left:5%;width:100%">
+<input type="file"></input>
+</div>
